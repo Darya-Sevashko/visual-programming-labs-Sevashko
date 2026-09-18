@@ -55,7 +55,10 @@
         <mxCell id="tbhJexQ41o-tyvyRIPhZ-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" value="Показать ошибку" vertex="1">
           <mxGeometry height="54" width="107" x="172" y="250" as="geometry" />
         </mxCell>
-        <mxCell id="tbhJexQ41o-tyvyRIPhZ-23" edge="1" parent="1" source="tbhJexQ41o-tyvyRIPhZ-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#000000);" target="tbhJexQ41o-tyvyRIPhZ-5">
+        <mxCell id="tbhJexQ41o-tyvyRIPhZ-23" edge="1" parent="1" source="HlOD2pWUnVtJjEnzQ60m-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#000000);" target="tbhJexQ41o-tyvyRIPhZ-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HlOD2pWUnVtJjEnzQ60m-3" edge="1" parent="1" source="tbhJexQ41o-tyvyRIPhZ-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#000000);" target="HlOD2pWUnVtJjEnzQ60m-1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="tbhJexQ41o-tyvyRIPhZ-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" value="Подтвердить оплату" vertex="1">
@@ -88,6 +91,9 @@
         </mxCell>
         <mxCell id="tbhJexQ41o-tyvyRIPhZ-26" connectable="0" parent="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=light-dark(#FFFFFF,#FFFFFF);fontColor=light-dark(#000000,#1A1A1A);" value="Нет" vertex="1">
           <mxGeometry x="285" y="362" as="geometry" />
+        </mxCell>
+        <mxCell id="HlOD2pWUnVtJjEnzQ60m-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" value="Отправить чек клиенту" vertex="1">
+          <mxGeometry height="54" width="107" x="504" y="398" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
