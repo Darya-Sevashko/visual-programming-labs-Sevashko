@@ -7,6 +7,14 @@
         "info": ""
     },
     {
+        "id": "3218b81954bdb18f",
+        "type": "tab",
+        "label": "2.3 Switch",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "3cc11d24.ff01a2",
         "type": "comment",
         "z": "f6f2187d.f17ca8",
@@ -125,6 +133,120 @@
         "statusType": "auto",
         "x": 920,
         "y": 420,
+        "wires": []
+    },
+    {
+        "id": "09a0fceef3cc54aa",
+        "type": "inject",
+        "z": "3218b81954bdb18f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "15",
+        "payloadType": "num",
+        "x": 570,
+        "y": 480,
+        "wires": [
+            [
+                "0d7489e710820798"
+            ]
+        ]
+    },
+    {
+        "id": "0d7489e710820798",
+        "type": "function",
+        "z": "3218b81954bdb18f",
+        "name": "function 1",
+        "func": "let input = msg.payload;\nconst numbers = [1, 2, 3, 4, 5];\nlet sum = 0;\nfor (let i = 0; i < numbers.length; i++) {\n    sum += numbers[i];\n}\nlet message;\nif (input >= 10) {\n    message = \"Большое число\";\n} else if (input >= 5) {\n    message = \"Среднее число\";\n} else {\n    message = \"Маленькое число\";\n}\nconst result = {\n    input: input,\n    sum: sum,\n    count: numbers.length,\n    message: message,\n    timestamp: new Date().toISOString()\n};\nmsg.payload = result;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 480,
+        "wires": [
+            [
+                "f07845a6ce182525"
+            ]
+        ]
+    },
+    {
+        "id": "f07845a6ce182525",
+        "type": "switch",
+        "z": "3218b81954bdb18f",
+        "name": "",
+        "property": "payload.message",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Большое число",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 890,
+        "y": 480,
+        "wires": [
+            [
+                "833cf66def140d16"
+            ],
+            [
+                "e404910cf3c931dc"
+            ]
+        ]
+    },
+    {
+        "id": "833cf66def140d16",
+        "type": "debug",
+        "z": "3218b81954bdb18f",
+        "name": "debug Выход 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "e404910cf3c931dc",
+        "type": "debug",
+        "z": "3218b81954bdb18f",
+        "name": "debug Выход 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 520,
         "wires": []
     }
 ]
