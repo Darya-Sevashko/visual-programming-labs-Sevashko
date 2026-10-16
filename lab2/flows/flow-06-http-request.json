@@ -1,0 +1,76 @@
+[
+    {
+        "id": "c9e7eb06cbfc2444",
+        "type": "tab",
+        "label": "2.6 HTTP Request",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "915ba282561595d4",
+        "type": "inject",
+        "z": "c9e7eb06cbfc2444",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "запрос",
+        "payloadType": "str",
+        "x": 550,
+        "y": 420,
+        "wires": [
+            [
+                "7381546297cb8a79"
+            ]
+        ]
+    },
+    {
+        "id": "7381546297cb8a79",
+        "type": "http request",
+        "z": "c9e7eb06cbfc2444",
+        "name": "Chuck Norris Joke",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.chucknorris.io/jokes/random",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 710,
+        "y": 420,
+        "wires": [
+            [
+                "37c1da6ada1c7d42"
+            ]
+        ]
+    },
+    {
+        "id": "37c1da6ada1c7d42",
+        "type": "debug",
+        "z": "c9e7eb06cbfc2444",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 420,
+        "wires": []
+    }
+]
