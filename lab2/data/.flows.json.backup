@@ -154,7 +154,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "5",
+        "payload": "15",
         "payloadType": "num",
         "x": 570,
         "y": 480,
