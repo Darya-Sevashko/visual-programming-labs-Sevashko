@@ -4,3 +4,11 @@ Thumbs.db
 
 # Logs
 *.log
+
+# lab2 Node-RED data (не нужно пушить)
+lab2/data/node_modules/
+lab2/data/.npm/
+lab2/data/package-lock.json
+lab2/data/.config.*.json
+lab2/data/*.backup
+lab2/data/.flows.json.backup
