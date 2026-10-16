@@ -12,3 +12,4 @@ lab2/data/package-lock.json
 lab2/data/.config.*.json
 lab2/data/*.backup
 lab2/data/.flows.json.backup
+lab2/data/lab2-file.json

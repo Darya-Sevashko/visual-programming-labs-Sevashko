@@ -71,6 +71,14 @@
         "env": []
     },
     {
+        "id": "fdb041d14a32b5b6",
+        "type": "tab",
+        "label": "2.11 Files",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "5870d4c46d8bbca8",
         "type": "mqtt-broker",
         "name": "HiveMQ Public",
@@ -1115,5 +1123,129 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "090505e541f55686",
+        "type": "inject",
+        "z": "fdb041d14a32b5b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "запись",
+        "payloadType": "str",
+        "x": 450,
+        "y": 340,
+        "wires": [
+            [
+                "515b5f0c9dda7e7f"
+            ]
+        ]
+    },
+    {
+        "id": "515b5f0c9dda7e7f",
+        "type": "function",
+        "z": "fdb041d14a32b5b6",
+        "name": "function 5",
+        "func": "const data = {\n    timestamp: new Date().toISOString(),\n    author: \"Севашко Дарья\",\n    message: \"Запись из Node-RED\",\n    value: Math.round(Math.random() * 100)\n};\n\nmsg.payload = JSON.stringify(data, null, 2) + \"\\n\";\nmsg.filename = \"/data/lab2-file.json\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 340,
+        "wires": [
+            [
+                "02dbb5e1cd0bc15e"
+            ]
+        ]
+    },
+    {
+        "id": "02dbb5e1cd0bc15e",
+        "type": "file",
+        "z": "fdb041d14a32b5b6",
+        "name": "",
+        "filename": "filename",
+        "filenameType": "msg",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 740,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "81e610cab50ca148",
+        "type": "file in",
+        "z": "fdb041d14a32b5b6",
+        "name": "",
+        "filename": "/data/lab2-file.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 570,
+        "y": 400,
+        "wires": [
+            [
+                "e0ab0bec5cd3ad6c"
+            ]
+        ]
+    },
+    {
+        "id": "ca8d18d344742b65",
+        "type": "inject",
+        "z": "fdb041d14a32b5b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "чтение",
+        "payloadType": "str",
+        "x": 410,
+        "y": 400,
+        "wires": [
+            [
+                "81e610cab50ca148"
+            ]
+        ]
+    },
+    {
+        "id": "e0ab0bec5cd3ad6c",
+        "type": "debug",
+        "z": "fdb041d14a32b5b6",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 400,
+        "wires": []
     }
 ]
