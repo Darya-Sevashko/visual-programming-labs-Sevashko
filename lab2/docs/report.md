@@ -41,71 +41,70 @@ docker run -d --name node-red-lab2 -p 1880:1880 -v "//c/Users/USER/Desktop/visua
 ## Скриншоты всех flow
 
 ### 2.1 Inject → Debug
-![Inject Debug](screenshots/01-inject-debug.png)
+![Inject Debug](../screenshots/01-inject-debug.png)
 
 ### 2.2 Function
-![Function](screenshots/02-function.png)
+![Function](../screenshots/02-function.png)
 
 ### 2.3 Switch
-![Switch](screenshots/03-switch.png)
+![Switch](../screenshots/03-switch.png)
 
 ### 2.4 Change
-![Change](screenshots/04-change.png)
+![Change](../screenshots/04-change.png)
 
 ### 2.5 Template
-![Template](screenshots/05-template.png)
+![Template](../screenshots/05-template.png)
 
 ### 2.6 HTTP Request
-![HTTP Request](screenshots/06-http-request.png)
+![HTTP Request](../screenshots/06-http-request.png)
 
 ### 2.7 MQTT
-![MQTT](screenshots/07-mqtt.png)
+![MQTT](../screenshots/07-mqtt.png)
 
 ### 2.8 GET-эндпоинты
 
 **/api/text**
-![Endpoints text](screenshots/08-endpoints-text.png)
+![Endpoints text](../screenshots/08-endpoints-text.png)
 
 **/api/info**
-![Endpoints info](screenshots/08-endpoints-info.png)
+![Endpoints info](../screenshots/08-endpoints-info.png)
 
 **/api/items/123 — успех**
-![Endpoints success](screenshots/08-endpoints-success.png)
+![Endpoints success](../screenshots/08-endpoints-success.png)
 
 **/api/items/abc — 400**
-![Endpoints 400](screenshots/08-endpoints-error-400.png)
+![Endpoints 400](../screenshots/08-endpoints-error-400.png)
 
 **/api/items/999 — 404**
-![Endpoints 404](screenshots/08-endpoints-error-404.png)
+![Endpoints 404](../screenshots/08-endpoints-error-404.png)
 
 **/api/items/5?filter=name — query params**
-![Endpoints query](screenshots/08-endpoints-query.png)
+![Endpoints query](../screenshots/08-endpoints-query.png)
 
 ### 2.9 Dashboard
 
 **Страница /ui**
-![Dashboard UI](screenshots/09-dashboard-ui.png)
+![Dashboard UI](../screenshots/09-dashboard-ui.png)
 
 **Холст**
-![Dashboard flow](screenshots/09-dashboard-flow.png)
+![Dashboard flow](../screenshots/09-dashboard-flow.png)
 
 ### 2.10 Telegram
 
 **BotFather**
-![Telegram botfather](screenshots/10-telegram-botfather.png)
+![Telegram botfather](../screenshots/10-telegram-botfather.png)
 
 **Чат с ботом**
-![Telegram chat](screenshots/10-telegram-chat.png)
+![Telegram chat](../screenshots/10-telegram-chat.png)
 
 **Холст**
-![Telegram flow](screenshots/10-telegram-flow.png)
+![Telegram flow](../screenshots/10-telegram-flow.png)
 
 ### 2.11 Файлы
-![Files](screenshots/11-files.png)
+![Files](../screenshots/11-files.png)
 
 ### 2.12 Контекст
-![Context](screenshots/12-context.png)
-
+![Context](../screenshots/12-context.png)
 ## Выводы
 
 В ходе работы я научилась запускать Node-RED в Docker и работать с volume, чтобы данные сохранялись между перезапусками. Освоила базовые ноды (inject, debug, function, switch, change, template), научилась делать HTTP-запросы к публичным API, работать с MQTT-брокером, создавать REST-эндпоинты, дашборд с графиками, Telegram-бота, читать и записывать файлы, использовать flow context.
