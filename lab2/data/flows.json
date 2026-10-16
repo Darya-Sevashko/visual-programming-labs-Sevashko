@@ -1,0 +1,1119 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3218b81954bdb18f",
+        "type": "tab",
+        "label": "2.3 Switch",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e9f1de81e5b6c6c1",
+        "type": "tab",
+        "label": "2.4 Change",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "543073fecee406ae",
+        "type": "tab",
+        "label": "2.5 Template",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c9e7eb06cbfc2444",
+        "type": "tab",
+        "label": "2.6 HTTP Request",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dcdf363d67a34745",
+        "type": "tab",
+        "label": "2.7 MQTT",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a5bd1c801face3e5",
+        "type": "tab",
+        "label": "2.8 Endpoints",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7b01f68a6d933bd2",
+        "type": "tab",
+        "label": "2.9 Dashboard",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1e4efa1eba73e30a",
+        "type": "tab",
+        "label": "2.10 Telegram",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5870d4c46d8bbca8",
+        "type": "mqtt-broker",
+        "name": "HiveMQ Public",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "4885c04f4827a206",
+        "type": "ui_tab",
+        "name": "Мониторинг температуры",
+        "icon": "thermometer",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5f746df0cd9da6c2",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "72c34e0f4ba23e1b",
+        "type": "ui_group",
+        "name": "Датчики",
+        "tab": "4885c04f4827a206",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "af90337d2e7718c3",
+        "type": "telegram bot",
+        "botname": "Lab2 Bot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "pollinterval": 300,
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": 6667,
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbothost": "0.0.0.0",
+        "localbotport": 8443,
+        "publicbotport": 8443,
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "3cc11d24.ff01a2",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "WARNING: please check you have started this container with a volume that is mounted to /data\\n otherwise any flow changes are lost when you redeploy or upgrade the container\\n (e.g. upgrade to a more recent node-red docker image).\\n  If you are using named volumes you can ignore this warning.\\n Double click or see info side panel to learn how to start Node-RED in Docker to save your work",
+        "info": "\nTo start docker with a bind mount volume (-v option), for example:\n\n```\ndocker run -it -p 1880:1880 -v /home/user/node_red_data:/data --name mynodered nodered/node-red\n```\n\nwhere `/home/user/node_red_data` is a directory on your host machine where you want to store your flows.\n\nIf you do not do this then you can experiment and redploy flows, but if you restart or upgrade the container the flows will be disconnected and lost. \n\nThey will still exist in a hidden data volume, which can be recovered using standard docker techniques, but that is much more complex than just starting with a named volume as described above.",
+        "x": 350,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "4f3cb6d23bc8e7db",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "lab2/Севашко/basic",
+        "payload": "Севашко",
+        "payloadType": "str",
+        "x": 670,
+        "y": 480,
+        "wires": [
+            [
+                "8f84a7f5cf9a4bfd"
+            ]
+        ]
+    },
+    {
+        "id": "8f84a7f5cf9a4bfd",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "bb55cd0a201ea583",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5",
+        "payloadType": "num",
+        "x": 590,
+        "y": 420,
+        "wires": [
+            [
+                "e6de3ab34c8f6abd"
+            ]
+        ]
+    },
+    {
+        "id": "e6de3ab34c8f6abd",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "обработка чисел",
+        "func": "let input = msg.payload;\nconst numbers = [1, 2, 3, 4, 5];\nlet sum = 0;\n\nfor (let i = 0; i < numbers.length; i++) {\n    sum += numbers[i];\n}\n\nlet message;\nif (input >= 10) {\n    message = \"Большое число\";\n} else if (input >= 5) {\n    message = \"Среднее число\";\n} else {\n    message = \"Маленькое число\";\n}\n\nconst result = {\n    input: input,\n    sum: sum,\n    count: numbers.length,\n    message: message,\n    timestamp: new Date().toISOString()\n};\n\nmsg.payload = result;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 420,
+        "wires": [
+            [
+                "cc7ad7f368df1c24"
+            ]
+        ]
+    },
+    {
+        "id": "cc7ad7f368df1c24",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "09a0fceef3cc54aa",
+        "type": "inject",
+        "z": "3218b81954bdb18f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "15",
+        "payloadType": "num",
+        "x": 570,
+        "y": 480,
+        "wires": [
+            [
+                "0d7489e710820798"
+            ]
+        ]
+    },
+    {
+        "id": "0d7489e710820798",
+        "type": "function",
+        "z": "3218b81954bdb18f",
+        "name": "function 1",
+        "func": "let input = msg.payload;\nconst numbers = [1, 2, 3, 4, 5];\nlet sum = 0;\nfor (let i = 0; i < numbers.length; i++) {\n    sum += numbers[i];\n}\nlet message;\nif (input >= 10) {\n    message = \"Большое число\";\n} else if (input >= 5) {\n    message = \"Среднее число\";\n} else {\n    message = \"Маленькое число\";\n}\nconst result = {\n    input: input,\n    sum: sum,\n    count: numbers.length,\n    message: message,\n    timestamp: new Date().toISOString()\n};\nmsg.payload = result;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 480,
+        "wires": [
+            [
+                "f07845a6ce182525"
+            ]
+        ]
+    },
+    {
+        "id": "f07845a6ce182525",
+        "type": "switch",
+        "z": "3218b81954bdb18f",
+        "name": "",
+        "property": "payload.message",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Большое число",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 890,
+        "y": 480,
+        "wires": [
+            [
+                "833cf66def140d16"
+            ],
+            [
+                "e404910cf3c931dc"
+            ]
+        ]
+    },
+    {
+        "id": "833cf66def140d16",
+        "type": "debug",
+        "z": "3218b81954bdb18f",
+        "name": "debug Выход 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "e404910cf3c931dc",
+        "type": "debug",
+        "z": "3218b81954bdb18f",
+        "name": "debug Выход 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "a9d1595121e61eec",
+        "type": "inject",
+        "z": "e9f1de81e5b6c6c1",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Привет из inject",
+        "payloadType": "str",
+        "x": 640,
+        "y": 400,
+        "wires": [
+            [
+                "3625546cb42a6af7"
+            ]
+        ]
+    },
+    {
+        "id": "3625546cb42a6af7",
+        "type": "change",
+        "z": "e9f1de81e5b6c6c1",
+        "name": "установка полей",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "lab2/change",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "timestamp",
+                "pt": "msg",
+                "to": "iso",
+                "tot": "date"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Изменено через change node",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 830,
+        "y": 400,
+        "wires": [
+            [
+                "6c25d83b3e9e70c9"
+            ]
+        ]
+    },
+    {
+        "id": "6c25d83b3e9e70c9",
+        "type": "debug",
+        "z": "e9f1de81e5b6c6c1",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "5e72063c22e3e29c",
+        "type": "inject",
+        "z": "543073fecee406ae",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "user",
+                "v": "Севашко",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"name\": \"Дарья\", \"age\": 20, \"city\": \"Гродно\"}",
+        "payloadType": "json",
+        "x": 640,
+        "y": 400,
+        "wires": [
+            [
+                "227aec5899619b52"
+            ]
+        ]
+    },
+    {
+        "id": "227aec5899619b52",
+        "type": "template",
+        "z": "543073fecee406ae",
+        "name": "Mustache шаблон",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n  \"пользователь\": \"{{payload.name}}\",\n  \"возраст\": {{payload.age}},\n  \"город\": \"{{payload.city}}\",\n  \"фамилия\": \"{{user}}\"\n}",
+        "output": "json",
+        "x": 810,
+        "y": 400,
+        "wires": [
+            [
+                "bfd8e3780550b275"
+            ]
+        ]
+    },
+    {
+        "id": "bfd8e3780550b275",
+        "type": "debug",
+        "z": "543073fecee406ae",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "915ba282561595d4",
+        "type": "inject",
+        "z": "c9e7eb06cbfc2444",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "запрос",
+        "payloadType": "str",
+        "x": 550,
+        "y": 420,
+        "wires": [
+            [
+                "7381546297cb8a79"
+            ]
+        ]
+    },
+    {
+        "id": "7381546297cb8a79",
+        "type": "http request",
+        "z": "c9e7eb06cbfc2444",
+        "name": "Chuck Norris Joke",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "https://api.chucknorris.io/jokes/random",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 710,
+        "y": 420,
+        "wires": [
+            [
+                "37c1da6ada1c7d42"
+            ]
+        ]
+    },
+    {
+        "id": "37c1da6ada1c7d42",
+        "type": "debug",
+        "z": "c9e7eb06cbfc2444",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "1f0418c4b992b628",
+        "type": "inject",
+        "z": "dcdf363d67a34745",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "num",
+        "x": 650,
+        "y": 380,
+        "wires": [
+            [
+                "f4fb93dc6cbc8280"
+            ]
+        ]
+    },
+    {
+        "id": "f4fb93dc6cbc8280",
+        "type": "function",
+        "z": "dcdf363d67a34745",
+        "name": "function 2",
+        "func": "// Генерируем случайное число от 0 до 100\nmsg.payload = Math.round(Math.random() * 100);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 380,
+        "wires": [
+            [
+                "ec4181998f61b5fd"
+            ]
+        ]
+    },
+    {
+        "id": "ec4181998f61b5fd",
+        "type": "mqtt out",
+        "z": "dcdf363d67a34745",
+        "name": "",
+        "topic": "student/Севашко/lab2/test",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5870d4c46d8bbca8",
+        "x": 1000,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "118040e0ad89f148",
+        "type": "mqtt in",
+        "z": "dcdf363d67a34745",
+        "name": "",
+        "topic": "student/Севашко/lab2/test",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "5870d4c46d8bbca8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 850,
+        "y": 440,
+        "wires": [
+            [
+                "af86d36a3af31e50"
+            ]
+        ]
+    },
+    {
+        "id": "af86d36a3af31e50",
+        "type": "debug",
+        "z": "dcdf363d67a34745",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "2a601526c7bf5b1b",
+        "type": "http in",
+        "z": "a5bd1c801face3e5",
+        "name": "GET /api/text",
+        "url": "/api/text",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 650,
+        "y": 380,
+        "wires": [
+            [
+                "65e5b2d1680a286c"
+            ]
+        ]
+    },
+    {
+        "id": "65e5b2d1680a286c",
+        "type": "template",
+        "z": "a5bd1c801face3e5",
+        "name": "Простой текст",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "Привет! Это простой текстовый ответ от Node-RED. Автор: Севашко Дарья.",
+        "output": "str",
+        "x": 820,
+        "y": 380,
+        "wires": [
+            [
+                "7e2d5efeec1b2b53"
+            ]
+        ]
+    },
+    {
+        "id": "7e2d5efeec1b2b53",
+        "type": "http response",
+        "z": "a5bd1c801face3e5",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 980,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "f3f5e45c99a2d446",
+        "type": "http in",
+        "z": "a5bd1c801face3e5",
+        "name": "GET /api/info",
+        "url": "/api/info",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 650,
+        "y": 440,
+        "wires": [
+            [
+                "2934fc6e78df9a76"
+            ]
+        ]
+    },
+    {
+        "id": "2934fc6e78df9a76",
+        "type": "function",
+        "z": "a5bd1c801face3e5",
+        "name": "function 3",
+        "func": "msg.payload = {\n    app: \"Node-RED Lab2\",\n    author: \"Севашко Дарья\"\n};\nmsg.headers = {\n    \"Content-Type\": \"application/json\"\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 440,
+        "wires": [
+            [
+                "43c56dacf031707f"
+            ]
+        ]
+    },
+    {
+        "id": "43c56dacf031707f",
+        "type": "http response",
+        "z": "a5bd1c801face3e5",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 980,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "9789f9994be75dd2",
+        "type": "http in",
+        "z": "a5bd1c801face3e5",
+        "name": "GET /api/items/:id",
+        "url": "/api/items/:id",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 670,
+        "y": 500,
+        "wires": [
+            [
+                "33fce571c80af840"
+            ]
+        ]
+    },
+    {
+        "id": "33fce571c80af840",
+        "type": "function",
+        "z": "a5bd1c801face3e5",
+        "name": "function 4",
+        "func": "const id = msg.req.params.id;\nconst query = msg.req.query;\n\n// Проверка: если id не число → 400 Bad Request\nif (isNaN(Number(id))) {\n    msg.statusCode = 400;\n    msg.payload = {\n        error: \"Bad Request\",\n        message: \"Параметр id должен быть числом\",\n        received: id\n    };\n    msg.headers = { \"Content-Type\": \"application/json\" };\n    return msg;\n}\n\n// Проверка: если id = 999 → 404 Not Found\nif (Number(id) === 999) {\n    msg.statusCode = 404;\n    msg.payload = {\n        error: \"Not Found\",\n        message: \"Элемент с таким id не найден\"\n    };\n    msg.headers = { \"Content-Type\": \"application/json\" };\n    return msg;\n}\n\n// Успешный ответ\nmsg.statusCode = 200;\nmsg.payload = {\n    id: Number(id),\n    name: \"Элемент #\" + id,\n    query: query,\n    message: \"OK\"\n};\nmsg.headers = { \"Content-Type\": \"application/json\" };\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 840,
+        "y": 500,
+        "wires": [
+            [
+                "7aa8a09d03948890"
+            ]
+        ]
+    },
+    {
+        "id": "7aa8a09d03948890",
+        "type": "http response",
+        "z": "a5bd1c801face3e5",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 970,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "dd53d6fb55d884ff",
+        "type": "inject",
+        "z": "7b01f68a6d933bd2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 210,
+        "y": 380,
+        "wires": [
+            [
+                "e12edebccc0d27c4"
+            ]
+        ]
+    },
+    {
+        "id": "e12edebccc0d27c4",
+        "type": "function",
+        "z": "7b01f68a6d933bd2",
+        "name": "Датчик температуры",
+        "func": "// Случайная температура от 20 до 30 °C\nmsg.payload = +(20 + Math.random() * 10).toFixed(2);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 380,
+        "wires": [
+            [
+                "e4d5df3cd28bc4e0",
+                "24426d2a72a546b5"
+            ]
+        ]
+    },
+    {
+        "id": "e4d5df3cd28bc4e0",
+        "type": "ui_gauge",
+        "z": "7b01f68a6d933bd2",
+        "name": "",
+        "group": "72c34e0f4ba23e1b",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Температура",
+        "label": "units",
+        "format": "{{value}} °C",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 620,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "24426d2a72a546b5",
+        "type": "ui_chart",
+        "z": "7b01f68a6d933bd2",
+        "name": "",
+        "group": "72c34e0f4ba23e1b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "История температуры",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 650,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cf3f322d71682397",
+        "type": "telegram receiver",
+        "z": "1e4efa1eba73e30a",
+        "name": "",
+        "bot": "af90337d2e7718c3",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "hasinput": false,
+        "inputs": 0,
+        "handleallupdates": false,
+        "handleprocessupdates": false,
+        "x": 210,
+        "y": 360,
+        "wires": [
+            [
+                "e5fb257ca5f4ac78"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e5fb257ca5f4ac78",
+        "type": "function",
+        "z": "1e4efa1eba73e30a",
+        "name": "Обработка команд",
+        "func": "const text = msg.payload.content;\n\nif (text === \"/start\") {\n    msg.payload.content = \"Привет! Я бот лабораторной работы №2. Автор: Севашко Дарья.\\n\\nДоступные команды:\\n/start — приветствие\\n/help — помощь\";\n} else if (text === \"/help\") {\n    msg.payload.content = \"Я умею: приветствовать по /start, отвечать по /help и отправлять эхо на любое сообщение.\";\n} else {\n    msg.payload.content = \"Эхо: \" + text;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 360,
+        "wires": [
+            [
+                "f9225bce579f0538"
+            ]
+        ]
+    },
+    {
+        "id": "f9225bce579f0538",
+        "type": "telegram sender",
+        "z": "1e4efa1eba73e30a",
+        "name": "",
+        "bot": "af90337d2e7718c3",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 630,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    }
+]

@@ -1,0 +1,100 @@
+[
+    {
+        "id": "1e4efa1eba73e30a",
+        "type": "tab",
+        "label": "2.10 Telegram",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cf3f322d71682397",
+        "type": "telegram receiver",
+        "z": "1e4efa1eba73e30a",
+        "name": "",
+        "bot": "af90337d2e7718c3",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "hasinput": false,
+        "inputs": 0,
+        "handleallupdates": false,
+        "handleprocessupdates": false,
+        "x": 210,
+        "y": 360,
+        "wires": [
+            [
+                "e5fb257ca5f4ac78"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "e5fb257ca5f4ac78",
+        "type": "function",
+        "z": "1e4efa1eba73e30a",
+        "name": "Обработка команд",
+        "func": "const text = msg.payload.content;\n\nif (text === \"/start\") {\n    msg.payload.content = \"Привет! Я бот лабораторной работы №2. Автор: Севашко Дарья.\\n\\nДоступные команды:\\n/start — приветствие\\n/help — помощь\";\n} else if (text === \"/help\") {\n    msg.payload.content = \"Я умею: приветствовать по /start, отвечать по /help и отправлять эхо на любое сообщение.\";\n} else {\n    msg.payload.content = \"Эхо: \" + text;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 360,
+        "wires": [
+            [
+                "f9225bce579f0538"
+            ]
+        ]
+    },
+    {
+        "id": "f9225bce579f0538",
+        "type": "telegram sender",
+        "z": "1e4efa1eba73e30a",
+        "name": "",
+        "bot": "af90337d2e7718c3",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 630,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "af90337d2e7718c3",
+        "type": "telegram bot",
+        "botname": "Lab2 Bot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "pollinterval": 300,
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": 6667,
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbothost": "0.0.0.0",
+        "localbotport": 8443,
+        "publicbotport": 8443,
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "e4574fb428c25721",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-telegrambot": "19.0.3"
+        }
+    }
+]
