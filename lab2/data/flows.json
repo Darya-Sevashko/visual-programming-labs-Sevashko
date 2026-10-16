@@ -58,8 +58,73 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 880,
+        "x": 900,
         "y": 480,
+        "wires": []
+    },
+    {
+        "id": "bb55cd0a201ea583",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5",
+        "payloadType": "num",
+        "x": 590,
+        "y": 420,
+        "wires": [
+            [
+                "e6de3ab34c8f6abd"
+            ]
+        ]
+    },
+    {
+        "id": "e6de3ab34c8f6abd",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "обработка чисел",
+        "func": "let input = msg.payload;\nconst numbers = [1, 2, 3, 4, 5];\nlet sum = 0;\n\nfor (let i = 0; i < numbers.length; i++) {\n    sum += numbers[i];\n}\n\nlet message;\nif (input >= 10) {\n    message = \"Большое число\";\n} else if (input >= 5) {\n    message = \"Среднее число\";\n} else {\n    message = \"Маленькое число\";\n}\n\nconst result = {\n    input: input,\n    sum: sum,\n    count: numbers.length,\n    message: message,\n    timestamp: new Date().toISOString()\n};\n\nmsg.payload = result;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 420,
+        "wires": [
+            [
+                "cc7ad7f368df1c24"
+            ]
+        ]
+    },
+    {
+        "id": "cc7ad7f368df1c24",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 420,
         "wires": []
     }
 ]
