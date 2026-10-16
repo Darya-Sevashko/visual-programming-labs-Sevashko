@@ -1,0 +1,72 @@
+[
+    {
+        "id": "90362bcaf011152e",
+        "type": "tab",
+        "label": "2.12 Context",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b8b4b412d268ccac",
+        "type": "inject",
+        "z": "90362bcaf011152e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "increment",
+        "payloadType": "str",
+        "x": 400,
+        "y": 480,
+        "wires": [
+            [
+                "54cf6985d9c33022"
+            ]
+        ]
+    },
+    {
+        "id": "54cf6985d9c33022",
+        "type": "function",
+        "z": "90362bcaf011152e",
+        "name": "Счётчик в контексте",
+        "func": "let counter = flow.get(\"counter\") || 0;\ncounter = counter + 1;\nflow.set(\"counter\", counter);\n\nmsg.payload = {\n    counter: counter,\n    message: \"Счётчик увеличен\",\n    timestamp: new Date().toISOString()\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 480,
+        "wires": [
+            [
+                "30e58443bc7e2c6a"
+            ]
+        ]
+    },
+    {
+        "id": "30e58443bc7e2c6a",
+        "type": "debug",
+        "z": "90362bcaf011152e",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 480,
+        "wires": []
+    }
+]
