@@ -1,0 +1,76 @@
+[
+    {
+        "id": "543073fecee406ae",
+        "type": "tab",
+        "label": "2.5 Template",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5e72063c22e3e29c",
+        "type": "inject",
+        "z": "543073fecee406ae",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "user",
+                "v": "Севашко",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"name\": \"Дарья\", \"age\": 20, \"city\": \"Гродно\"}",
+        "payloadType": "json",
+        "x": 640,
+        "y": 400,
+        "wires": [
+            [
+                "227aec5899619b52"
+            ]
+        ]
+    },
+    {
+        "id": "227aec5899619b52",
+        "type": "template",
+        "z": "543073fecee406ae",
+        "name": "Mustache шаблон",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n  \"пользователь\": \"{{payload.name}}\",\n  \"возраст\": {{payload.age}},\n  \"город\": \"{{payload.city}}\",\n  \"фамилия\": \"{{user}}\"\n}",
+        "output": "json",
+        "x": 810,
+        "y": 400,
+        "wires": [
+            [
+                "bfd8e3780550b275"
+            ]
+        ]
+    },
+    {
+        "id": "bfd8e3780550b275",
+        "type": "debug",
+        "z": "543073fecee406ae",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 400,
+        "wires": []
+    }
+]
