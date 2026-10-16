@@ -443,7 +443,7 @@
         "topic": "",
         "payload": "запрос",
         "payloadType": "str",
-        "x": 690,
+        "x": 550,
         "y": 420,
         "wires": [
             [
@@ -467,7 +467,7 @@
         "authType": "",
         "senderr": false,
         "headers": [],
-        "x": 850,
+        "x": 710,
         "y": 420,
         "wires": [
             [
@@ -488,7 +488,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1020,
+        "x": 880,
         "y": 420,
         "wires": []
     }

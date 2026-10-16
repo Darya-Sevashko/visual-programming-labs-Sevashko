@@ -1,0 +1,141 @@
+[
+    {
+        "id": "dcdf363d67a34745",
+        "type": "tab",
+        "label": "2.7 MQTT",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1f0418c4b992b628",
+        "type": "inject",
+        "z": "dcdf363d67a34745",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "num",
+        "x": 650,
+        "y": 380,
+        "wires": [
+            [
+                "f4fb93dc6cbc8280"
+            ]
+        ]
+    },
+    {
+        "id": "f4fb93dc6cbc8280",
+        "type": "function",
+        "z": "dcdf363d67a34745",
+        "name": "function 2",
+        "func": "// Генерируем случайное число от 0 до 100\nmsg.payload = Math.round(Math.random() * 100);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 380,
+        "wires": [
+            [
+                "ec4181998f61b5fd"
+            ]
+        ]
+    },
+    {
+        "id": "ec4181998f61b5fd",
+        "type": "mqtt out",
+        "z": "dcdf363d67a34745",
+        "name": "",
+        "topic": "student/Севашко/lab2/test",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "5870d4c46d8bbca8",
+        "x": 1000,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "118040e0ad89f148",
+        "type": "mqtt in",
+        "z": "dcdf363d67a34745",
+        "name": "",
+        "topic": "student/Севашко/lab2/test",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "5870d4c46d8bbca8",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 850,
+        "y": 440,
+        "wires": [
+            [
+                "af86d36a3af31e50"
+            ]
+        ]
+    },
+    {
+        "id": "af86d36a3af31e50",
+        "type": "debug",
+        "z": "dcdf363d67a34745",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "5870d4c46d8bbca8",
+        "type": "mqtt-broker",
+        "name": "HiveMQ Public",
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
