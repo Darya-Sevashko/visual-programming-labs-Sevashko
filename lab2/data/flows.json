@@ -989,7 +989,7 @@
         "type": "function",
         "z": "7b01f68a6d933bd2",
         "name": "Датчик температуры",
-        "func": "// Случайная температура от 20 до 30 °C\nmsg.payload = +(20 + Math.random() * 10).toFixed(2);\nreturn msg;",
+        "func": "msg.payload = +(20 + Math.random() * 10).toFixed(2);\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
