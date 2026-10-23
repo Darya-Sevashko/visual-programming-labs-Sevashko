@@ -46,7 +46,9 @@
 
 **2.1. Manual Trigger → Set → Code**
 
-![Workflow 2.1](../screenshots/02-workflow-set.png)
+![Workflow 2.1 (ноды)](../screenshots/02-workflow-set-nodes.png)
+
+![Workflow 2.1 (результат)](../screenshots/02-workflow-set-json.png)
 
 **2.2. Code node (базовые элементы JS)**
 
