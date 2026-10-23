@@ -35,17 +35,17 @@ https://my-app-261023-19062.bubbleapps.io/version-test/
 
 **Скриншоты исследования:**
 
-![Build Guide 1](screenshots/02-buildguide-1.png)
+![Build Guide 1](../screenshots/02-buildguide-1.png)
 
-![Build Guide 2](screenshots/02-buildguide-2.png)
+![Build Guide 2](../screenshots/02-buildguide-2.png)
 
 **До внедрения идеи:**
 
-![До](screenshots/02-buildguide-before.png)
+![До](../screenshots/02-buildguide-before.png)
 
 **После внедрения (добавлена форма):**
 
-![После](screenshots/02-buildguide-after.png)
+![После](../screenshots/02-buildguide-after.png)
 
 ## 6. Какие элементы и workflows освоены
 
@@ -61,55 +61,55 @@ https://my-app-261023-19062.bubbleapps.io/version-test/
 
 ### Часть 1. Промпт и генерация
 
-![Промпт](screenshots/01-prompt.png)
+![Промпт](../screenshots/01-prompt.png)
 
 ### Часть 3. Ручная доработка UI
 
 **Global Variable (переменная цвета):**
 
-![Global Variable](screenshots/03-global-variable.png)
+![Global Variable](../screenshots/03-global-variable.png)
 
 **Создание и применение стиля:**
 
-![Style](screenshots/04-style.png)
+![Style](../screenshots/04-style.png)
 
 **Добавление готового компонента:**
 
-![Component](screenshots/05-component.png)
+![Component](../screenshots/05-component.png)
 
 ### Часть 4. Data и Workflows
 
 **Типы данных (Data Type):**
 
-![Data Type](screenshots/06-data-type.png)
+![Data Type](../screenshots/06-data-type.png)
 
 **Записи в базе данных (App Data):**
 
-![Data Records](screenshots/07-data-records.png)
+![Data Records](../screenshots/07-data-records.png)
 
 **Create (Создание) - Настройка:**
 
-![Workflow Create](screenshots/08-workflow-create.png)
+![Workflow Create](../screenshots/08-workflow-create.png)
 
 **Create (Создание) - Результат:**
 
-![Result Create](screenshots/09-workflow-create.png)
+![Result Create](../screenshots/09-workflow-create.png)
 
 **Delete (Удаление) - Начало:**
 
-![Workflow Delete](screenshots/10-workflow-delete.png)
+![Workflow Delete](../screenshots/10-workflow-delete.png)
 
 **Delete (Удаление) - Результат:**
 
-![Result Delete](screenshots/11-workflow-delete.png)
+![Result Delete](../screenshots/11-workflow-delete.png)
 
 **Update (Редактирование) - Начало:**
 
-![Workflow Update](screenshots/12-workflow-update.png)
+![Workflow Update](../screenshots/12-workflow-update.png)
 
 **Update (Редактирование) - Результат:**
 
-![Result Update](screenshots/13-workflow-update.png)
+![Result Update](../screenshots/13-workflow-update.png)
 
 ## 8. Выводы
 
