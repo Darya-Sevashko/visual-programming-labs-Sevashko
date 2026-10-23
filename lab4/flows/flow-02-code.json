@@ -1,0 +1,77 @@
+{
+  "name": "My workflow 2",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "cf7e4b6f-e02b-4b32-98b7-712def0801ed",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "jsCode": "const numbers = [1, 2, 3, 4, 5];\nlet sum = 0;\n\nfor (let i = 0; i < numbers.length; i++) {\n  sum += numbers[i];\n}\n\nlet status;\nif (sum > 10) {\n  status = \"Сумма больше 10\";\n} else {\n  status = \"Сумма меньше или равна 10\";\n}\n\nconst result = {\n  sum: sum,\n  status: status,\n  count: numbers.length\n};\n\nreturn {\n  payload: result\n};"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        224,
+        0
+      ],
+      "id": "f13c3326-3363-4a4a-94de-938191f50ffb",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        448,
+        0
+      ],
+      "id": "a8199f9e-e5ab-4d6c-a708-b6adf5c5280b",
+      "name": "No Operation, do nothing"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "8d8423b9-a682-47ba-a8fe-8eda1a506e08",
+  "meta": {
+    "instanceId": "1171505beb26e44283013cc9fd3f2a04a78c9970619adae5253a5f83a160a8c7"
+  },
+  "nodeGroups": [],
+  "id": "bLODHeLBvL5bWngX",
+  "tags": []
+}

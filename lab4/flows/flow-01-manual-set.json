@@ -1,0 +1,95 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "e5e0c04a-0a23-4b3b-ab63-c3b28c92b1a3",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c4f95412-e53a-43fe-a7ef-2d2dbff5f847",
+              "name": "payload",
+              "value": "Севашко",
+              "type": "string"
+            },
+            {
+              "id": "2e9e5965-29af-4539-bd3c-477ef639ddc9",
+              "name": "topic",
+              "value": "lab4/Севашко/basic",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        224,
+        0
+      ],
+      "id": "560748a0-92e5-4c13-aa67-4ac7e6bf28b9",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "jsCode": "const payload = $input.first().json.payload;\nconst topic = $input.first().json.topic;\nconsole.log(\"Payload:\", payload);\nconsole.log(\"Topic:\", topic);\nreturn { payload, topic };"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        400,
+        0
+      ],
+      "id": "44e667c4-dc7f-48e9-9709-4c2d8c3e27cb",
+      "name": "Code in JavaScript"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "a43bb962-6267-4375-af01-6d44a97e9f88",
+  "meta": {
+    "instanceId": "1171505beb26e44283013cc9fd3f2a04a78c9970619adae5253a5f83a160a8c7"
+  },
+  "nodeGroups": [],
+  "id": "F9OxL43cioEuNe1S",
+  "tags": []
+}

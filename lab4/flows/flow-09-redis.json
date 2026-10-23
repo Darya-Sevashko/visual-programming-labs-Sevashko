@@ -1,0 +1,96 @@
+{
+  "name": "My workflow 7",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "247778f7-2ded-41b8-a86d-b05ead0fe38f",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "operation": "set",
+        "key": "Sevashko",
+        "value": "Hello from Redis!"
+      },
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        224,
+        0
+      ],
+      "id": "b6034bbc-d02b-4ffb-940e-18944e59aa95",
+      "name": "Redis",
+      "credentials": {
+        "redis": {
+          "id": "nXXhja86utH11RUt",
+          "name": "Redis account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "key": "Sevashko",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        384,
+        0
+      ],
+      "id": "c4387141-7464-45b7-8bd5-888ac9c5eae0",
+      "name": "Redis1",
+      "credentials": {
+        "redis": {
+          "id": "nXXhja86utH11RUt",
+          "name": "Redis account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Redis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redis": {
+      "main": [
+        [
+          {
+            "node": "Redis1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "7f1a89a7-5d07-4f0b-815a-4a08a0e39ea3",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1171505beb26e44283013cc9fd3f2a04a78c9970619adae5253a5f83a160a8c7"
+  },
+  "nodeGroups": [],
+  "id": "ZQ3fKrGDiGiH0RHL",
+  "tags": []
+}
