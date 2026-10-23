@@ -1,174 +1,109 @@
-\# Отчёт по лабораторной работе №4 (n8n)
+# Отчёт по лабораторной работе №4 (n8n)
 
-
-
-\## 1. Краткое описание выполненного
-
-
+## 1. Краткое описание выполненного
 
 В ходе работы я освоила платформу автоматизации n8n. Я запустила n8n и Redis в Docker-контейнерах с использованием volume для сохранения данных. 
 
-
-
 В процессе работы я изучила базовые ноды (Manual Trigger, Set, Code, IF, Schedule Trigger, HTTP Request) и собрала 6 простых workflow, экспортировав каждый в отдельный JSON-файл.
-
-
 
 Также я настроила интеграцию с базой данных Redis: создала Credentials для подключения и собрала два workflow. Первый создает и читает ключ, второй удаляет ключ и проверяет его отсутствие. 
 
-
-
 Дополнительно я выполнила ачивку 1.1 — подключила локальную нейросеть через Ollama и использовала её в рабочем workflow.
 
+## 2. Какие AI-промпты использовались
 
+1. «Как запустить n8n в Docker с сохранением данных (volume)?»
 
-\## 2. Какие AI-промпты использовались
+2. «Как в n8n настроить подключение к Redis, если он запущен в соседнем Docker-контейнере?»
 
+3. «Как в ноде Code в n8n вывести текущее время в формате ISO?»
 
+4. «Как подключить локальную модель Ollama к n8n?»
 
-1\. «Как запустить n8n в Docker с сохранением данных (volume)?»
+## 3. Какие ноды освоены
 
-2\. «Как в n8n настроить подключение к Redis, если он запущен в соседнем Docker-контейнере?»
+* **Триггеры**: Manual Trigger, Schedule Trigger.
 
-3\. «Как в ноде Code в n8n вывести текущее время в формате ISO?»
+* **Обработка данных**: Set (Edit Fields) — для изменения и создания полей, Code — для написания JavaScript-кода.
 
-4\. «Как подключить локальную модель Ollama к n8n?»
+* **Логика**: IF — для ветвления потоков по условиям.
 
+* **Сеть и API**: HTTP Request — для получения данных из внешних сервисов.
 
+* **Базы данных**: Redis (Set, Get, Delete).
 
-\## 3. Какие ноды освоены
+* **AI/LLM**: Basic LLM Chain, Ollama Chat Model.
 
+* **Служебные**: No Operation — для завершения ветки.
 
+## 4. Скриншоты всех workflow
 
-\* \*\*Триггеры\*\*: Manual Trigger, Schedule Trigger.
+### Часть 1. Проверка версии
 
-\* \*\*Обработка данных\*\*: Set (Edit Fields) — для изменения и создания полей, Code — для написания JavaScript-кода.
+![Версия n8n](../screenshots/01-version.png)
 
-\* \*\*Логика\*\*: IF — для ветвления потоков по условиям.
+### Часть 2. Изучение нод и создание workflow
 
-\* \*\*Сеть и API\*\*: HTTP Request — для получения данных из внешних сервисов.
+**2.1. Manual Trigger → Set → Code**
 
-\* \*\*Базы данных\*\*: Redis (Set, Get, Delete).
+![Workflow 2.1](../screenshots/02-workflow-set.png)
 
-\* \*\*AI/LLM\*\*: Basic LLM Chain, Ollama Chat Model.
+**2.2. Code node (базовые элементы JS)**
 
-\* \*\*Служебные\*\*: No Operation — для завершения ветки.
+![Workflow 2.2](../screenshots/03-workflow-code.png)
 
+**2.3. IF node (ветвление)**
 
+![Workflow 2.3](../screenshots/04-workflow-if.png)
 
-\## 4. Скриншоты всех workflow
+**2.4. Set node (изменение полей)**
 
+![Workflow 2.4](../screenshots/05-workflow-set.png)
 
+**2.5. HTTP Request node (публичный API)**
 
-\### Часть 1. Проверка версии
+![Workflow 2.5](../screenshots/06-workflow-http.png)
 
-!\[Версия n8n](../screenshots/01-version.png)
+**2.6. Schedule Trigger (расписание)**
 
+![Workflow 2.6](../screenshots/07-workflow-schedule.png)
 
+### Часть 3. Redis: создание и удаление ключа
 
-\### Часть 2. Изучение нод и создание workflow
+**Создание и чтение ключа (Set → Get):**
 
+![Redis Set Get](../screenshots/08-redis-set-get.png)
 
+**Удаление и проверка отсутствия (Delete → Get):**
 
-\*\*2.1. Manual Trigger → Set → Code\*\*
+![Redis Delete Check](../screenshots/09-redis-delete-exists.png)
 
-!\[Workflow 2.1](../screenshots/02-workflow-set.png)
-
-
-
-\*\*2.2. Code node (базовые элементы JS)\*\*
-
-!\[Workflow 2.2](../screenshots/03-workflow-code.png)
-
-
-
-\*\*2.3. IF node (ветвление)\*\*
-
-!\[Workflow 2.3](../screenshots/04-workflow-if.png)
-
-
-
-\*\*2.4. Set node (изменение полей)\*\*
-
-!\[Workflow 2.4](../screenshots/05-workflow-set.png)
-
-
-
-\*\*2.5. HTTP Request node (публичный API)\*\*
-
-!\[Workflow 2.5](../screenshots/06-workflow-http.png)
-
-
-
-\*\*2.6. Schedule Trigger (расписание)\*\*
-
-!\[Workflow 2.6](../screenshots/07-workflow-schedule.png)
-
-
-
-\### Часть 3. Redis: создание и удаление ключа
-
-
-
-\*\*Создание и чтение ключа (Set → Get):\*\*
-
-!\[Redis Set Get](../screenshots/08-redis-set-get.png)
-
-
-
-\*\*Удаление и проверка отсутствия (Delete → Get):\*\*
-
-!\[Redis Delete Check](../screenshots/09-redis-delete-exists.png)
-
-
-
-\## 5. Ачивка 1.1: Подключение локальной модели через Ollama
-
-
+## 5. Ачивка 1.1: Подключение локальной модели через Ollama
 
 В качестве дополнительной ачивки я подключила локальную языковую модель к n8n.
 
+**Что было сделано:**
 
+1. Установлена программа Ollama для запуска нейросетей локально.
 
-\*\*Что было сделано:\*\*
+2. Скачана модель llama3.2 через терминал Git Bash.
 
-1\. Установлена программа Ollama для запуска нейросетей локально.
+3. В n8n созданы Credentials для Ollama с базовым URL http://host.docker.internal:11434 (чтобы контейнер n8n видел Ollama на хосте).
 
-2\. Скачана модель `llama3.2` через терминал Git Bash.
+4. Собран workflow, в котором нода Basic LLM Chain использует модель llama3.2 для генерации приветствия по заданному промпту.
 
-3\. В n8n созданы Credentials для Ollama с базовым URL `http://host.docker.internal:11434` (чтобы контейнер n8n видел Ollama на хосте).
+**Скриншоты ачивки:**
 
-4\. Собран workflow, в котором нода `Basic LLM Chain` использует модель `llama3.2` для генерации приветствия по заданному промпту.
+![Credentials Ollama](../screenshots/10-achievement-credentials.png)
 
+![Terminal Ollama](../screenshots/11-achievement-ollama-terminal.png)
 
+![Workflow Ollama](../screenshots/12-achievement-ollama-workflow.png)
 
-\*\*Скриншоты ачивки:\*\*
-
-
-
-!\[Credentials Ollama](../screenshots/10-achievement-credentials.png)
-
-
-
-!\[Terminal Ollama](../screenshots/11-achievement-ollama-terminal.png)
-
-
-
-!\[Workflow Ollama](../screenshots/12-achievement-ollama-workflow.png)
-
-
-
-\## 6. Выводы
-
-
+## 6. Выводы
 
 В ходе выполнения лабораторной работы я познакомилась с n8n как с мощным инструментом low-code автоматизации. По сравнению с Node-RED, n8n показался мне более строгим и ориентированным на работу с данными в формате JSON. 
 
-
-
-Самым интересным этапом было подключение базы данных Redis через Docker. Я поняла, как работают сетевые хосты в контейнерах (`host.docker.internal`). Также я научилась настраивать Credentials в n8n для безопасного подключения к сторонним сервисам. 
-
-
+Самым интересным этапом было подключение базы данных Redis через Docker. Я поняла, как работают сетевые хосты в контейнерах (host.docker.internal). Также я научилась настраивать Credentials в n8n для безопасного подключения к сторонним сервисам. 
 
 Отдельный интерес вызвало выполнение ачивки с локальной нейросетью Ollama. Я увидела, как можно использовать возможности искусственного интеллекта совершенно бесплатно и конфиденциально, не отправляя данные в облачные сервисы. Работа с нодой Code показала, как легко расширить функционал платформы с помощью JavaScript.
-
