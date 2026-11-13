@@ -76,7 +76,8 @@
 ![Данные Легенд](../screenshots/09-data-legends.png)
 
 **Базовая кнопка:**
-![Базовая кнопка](../screenshots/10-button.png)
+![Настройка кнопки](../screenshots/10-button-settings.png)
+![Базовая кнопка](../screenshots/10-button-result.png)
 
 **Представление Канбан:**
 ![Канбан](../screenshots/11-kanban.png)
